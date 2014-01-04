@@ -28,12 +28,25 @@ module.exports = function(grunt) {
         options: {livereload: true},
         files: ['css/*.css'],
       },
-    }
+    },
+      
+    connect: {
+      server: {
+        options:{
+            livereload: true,
+            hostname: '*',
+            port: '80',
+            open: 'http://localhost',
+        },
+      },
+    },
   });
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('connect-livereload');
 
   grunt.registerTask('build', ['sass']);
-  grunt.registerTask('default', ['build','watch']);
+  grunt.registerTask('default', ['build','connect','watch']);
 }
