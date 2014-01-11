@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         
       livereload: {
         options: {livereload: true},
-        files: ['css/*.css'],
+        files: ['css/*.css', '*.html'],
       },
     },
       
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('connect-livereload');
+//  grunt.loadNpmTasks('connect-livereload');
 
   grunt.registerTask('build', ['sass']);
   grunt.registerTask('default', ['build','connect','watch']);
