@@ -19,10 +19,16 @@ h1 {
     color: #4ccead;
     font-family: 'Roboto Slab', serif;
     min-width: 100%;
-//    font-size: 3em;
+//    font-size: 200px;
     font-weight: 300;
     a {
         color: #4cceca;
+    }
+    
+    display: table;
+    div{
+        display: table-cell;
+        vertical-align: middle;
     }
 }
 
